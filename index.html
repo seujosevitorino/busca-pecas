@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Busca de Peças</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff"/>
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Busca de Peças">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Busca de Peças</h1>
+    <button id="installBtn" hidden>Instalar</button>
+  </header>
+
+  <section class="controls">
+    <div class="field">
+      <label>Descrição da peça</label>
+      <input id="termo1" type="text" placeholder="Ex.: retrovisor esquerdo">
+    </div>
+    <div class="field">
+      <label>Termo geral</label>
+      <input id="termo2" type="text" placeholder="Ex.: gol g5 2012">
+    </div>
+    <div class="buttons">
+      <button id="buscar">Buscar (Enter)</button>
+      <button id="limpar" class="secondary">Limpar</button>
+    </div>
+    <div id="contador" class="muted">Quantidade de peças localizadas: 0</div>
+  </section>
+
+  <section id="results"></section>
+
+  <section class="details">
+    <div class="row">
+      <label>Código do Mercado</label>
+      <div class="copy-row">
+        <input id="codigo" type="text" readonly>
+        <button id="copiar">Copiar</button>
+      </div>
+    </div>
+    <div class="row">
+      <label>Descrição selecionada</label>
+      <textarea id="descricao" rows="2" readonly></textarea>
+    </div>
+  </section>
+
+  <footer>
+    <small>Funciona offline. No iPhone: Compartilhar → “Adicionar à Tela de Início”.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
